@@ -40,6 +40,11 @@ nav{
   float: right;
 }
 
+#menu{
+  float:right;
+  padding-right: 10px;
+  padding-top:10px;
+}
 
 
 
@@ -62,9 +67,6 @@ main h2{
 
 
 
-/*footer,header{
-  margin: 20px auto;
-}*/
 
 main{
   margin: 20px auto;
