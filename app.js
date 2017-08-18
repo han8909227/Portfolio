@@ -17,7 +17,17 @@ portfolio.handleClick = function(){
   });
 };
 
+var t = setInterval(function(){
+  $("ul").animate({marginLeft:-500},1000,function(){
+	  $(this).find("li:last").after($(this).find("li:first"));
+	 $(this).attr('class','sliding');
+  });
+},3000);
+
+
+
 $(document).ready(function(){
   portfolio.handle();
   portfolio.handleClick();
+  t;
 });
