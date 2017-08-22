@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <header>
   <link rel="stylesheet" type="text/css" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,13 +23,19 @@
 
 <main>
 
-<section class="slide">
-<ul class="slide" id ="page">
-  <li><img class = "screenshot" src = "http://via.placeholder.com/350x150/72a85c"></li>
-  <li><img class = "screenshot" src = "http://via.placeholder.com/350x150/4286f4"></li>
-  <li><img class = "screenshot" src = "http://via.placeholder.com/350x150"></li>
-</ul>
-</section>
+  <div id="slide">
+    <a href="#" id="next">>></a>
+    <a href="#" id="prev"><</a>
+    <ul id ="imgUl">
+      <li><img class = "img" style="float:left" src="img/1.jpg"></li>
+      <li><img class = "img" style="float:left" src="img/2.jpg"></li>
+      <li><img class = "img" style="float:left" src="img/3.jpg"></li>
+      <li><img class = "img" style="float:left" src="img/4.jpg"></li>
+    </ul>
+  </div>
+
+
+
 
 <section class = "project" id = "page">
 <div class = "project1">
