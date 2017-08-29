@@ -12,9 +12,9 @@
   <nav>
     <i class="fa fa-bars fa-3x" id="menu" aria-hidden="true"></i>
     <ul class="menu">
-      <li data-content = "slide"><a href="#"> Screenshots </a></li>
-      <li data-content = "project"><a href="#"> Projects </a></li>
-      <li data-content = "about"><a href="#"> About me </a></li>
+      <li data-content = "slide"><a href="/slide"> Screenshots </a></li>
+      <li data-content = "project"><a href="/project"> Projects </a></li>
+      <li data-content = "about"><a href="/about"> About me </a></li>
     </ul>
   </nav>
 
@@ -23,7 +23,7 @@
 
 <main>
 
-  <div id="slide">
+  <div class="slide" id="page">
     <a href="#" id="next">>></a>
     <a href="#" id="prev"><</a>
     <ul id ="imgUl">
@@ -54,13 +54,19 @@
 velit quis venenatis tincidunt. Ut neque nibh, ornare venenatis ornare vel, interdum eget neque. Fusce vel dignissim augue. Cras eget sagittis orci. Donec odio odio, vulputate sit amet aliquet eget, iaculis et ante. Nullam luctus dui efficitur, iaculis lacus at, euismod est. Morbi in placerat elit, nec dapibus nulla. Morbi eleifend lacus vel blandit cursus.
 
 Etiam vel elit augue. feugiat sem sem. Sed ullamcorper, nulla consectetur facilisis vestibulum, sem erat tincidunt enim, sed semper ex dui sit amet turpis. Donec quis arcu hendrerit libero dictum pulvinar. Nulla congue ultricies lacus efficitur venenatis.</p>
-
 </section>
 
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="app.js"></script>
+<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+<script src="/scripts/app.js"></script>
+<!-- <script src="/scripts/text.js"></script> -->
+<script src="/scripts/controllers/aboutControl.js"></script>
+<script src="/scripts/controllers/projectControl.js"></script>
+<script src="/scripts/controllers/slideControl.js"></script>
+<script src="/scripts/controllers/route.js"></script>
+
 
 </main>
 <footer>
