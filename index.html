@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <header>
+
   <link rel="stylesheet" type="text/css" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,6 +22,22 @@
 </header>
 
 <main>
+  <script id="author-template" type="text/x-handlebars-template">
+    <li><strong>{{name}}</strong>: {{numWords}} words written</li>
+  </script>
+
+  <script id="repo-template" type="text/x-handlebars-template">
+    <li>
+      <a href="{{html_url}}" target="_blank">
+        <h3>{{name}}</h3>
+      </a>
+      <p>Total commits: {{commits_url}}</p>
+      <p>Average commit length: {{git_commits_url}}</p>
+      {{#if watchers_count}}
+        <p>{{watchers_count}} watching this repo</p>
+      {{/if}}
+    </li>
+  </script>
 
   <div class="slide" id="page">
     <a href="#" id="next">>></a>
@@ -34,15 +50,14 @@
     </ul>
   </div>
 
-
-
-
 <section class = "project" id = "page">
-<div class = "project1">
-</div>
+    <section>
+      <h1>Some of my recent projects:</h1>
+      <ul>
+      </ul>
+    </section>
 
-<div class = "project2">
-</div>
+
 </section>
 
 
@@ -60,8 +75,14 @@ Etiam vel elit augue. feugiat sem sem. Sed ullamcorper, nulla consectetur facili
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+<script scr="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
 <script src="/scripts/app.js"></script>
 <!-- <script src="/scripts/text.js"></script> -->
+<script src="/scripts/models/githubToken.js"></script>
+<script src="/scripts/models/repo.js"></script>
+<script src="/scripts/views/repoView.js"></script>
+
+
 <script src="/scripts/controllers/aboutControl.js"></script>
 <script src="/scripts/controllers/projectControl.js"></script>
 <script src="/scripts/controllers/slideControl.js"></script>
