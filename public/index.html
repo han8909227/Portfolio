@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html>
-<header>
 
-  <link rel="stylesheet" type="text/css" href="style.css" />
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+  <script id="repo-template" type="text/x-handlebars-template">
+    <li>
+      <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+      <p>Description: {{description}}</p>
+      <p>Language: {{language}}</p>
+      <p>Created: {{created_at}}</p>
+      <p>Last updated: {{updated_at}}</p>
+      {{#if watchers_count}}
+        <p>{{watchers_count}} watching this repo</p>
+      {{/if}}
+    </li>
+  </script>
+</head>
 
 
+<body>
+<header>
   <h1 class = "name"> Han Bao </h1>
 
   <nav>
     <i class="fa fa-bars fa-3x" id="menu" aria-hidden="true"></i>
     <ul class="menu">
       <li data-content = "slide"><a href="/slide"> Screenshots </a></li>
-      <li data-content = "project"><a href="/project"> Projects </a></li>
+      <li data-content = "project"><a href="/github"> Projects </a></li>
       <li data-content = "about"><a href="/about"> About me </a></li>
     </ul>
   </nav>
@@ -22,22 +40,8 @@
 </header>
 
 <main>
-  <script id="author-template" type="text/x-handlebars-template">
-    <li><strong>{{name}}</strong>: {{numWords}} words written</li>
-  </script>
 
-  <script id="repo-template" type="text/x-handlebars-template">
-    <li>
-      <a href="{{html_url}}" target="_blank">
-        <h3>{{name}}</h3>
-      </a>
-      <p>Total commits: {{commits_url}}</p>
-      <p>Average commit length: {{git_commits_url}}</p>
-      {{#if watchers_count}}
-        <p>{{watchers_count}} watching this repo</p>
-      {{/if}}
-    </li>
-  </script>
+
 
   <div class="slide" id="page">
     <a href="#" id="next">>></a>
@@ -50,19 +54,15 @@
     </ul>
   </div>
 
-<section class = "project" id = "page">
+<section class="page" id = "project">
     <section>
       <h1>Some of my recent projects:</h1>
       <ul>
       </ul>
     </section>
-
-
 </section>
 
-
-
-<section class="about" id = "page">
+<section class="page" id = "about">
   <h2>About Me</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut neque nibh, ornare venenatis ornare vel, interdum eget neque. Fusce vel dignissim augue. Cras eget sagittis orci. Donec odio odio, vulputate sit amet aliquet eget, iaculis et ante. Nullam luctus dui efficitur, iaculis lacus at, euismod est. Morbi in placerat elit, nec dapibus nulla. Morbi eleifend lacus vel blandit cursus.
     elit quis venenatis tinciduntte sit amet aliquet eget, iaculis et ante. Nullam luctus dui efficitur, iaculis lacus at, euismod est. Morbi in placerat elit, nec dapibus nulla. Morbi eleifend lacus vel blandit cursus.
@@ -72,27 +72,19 @@ Etiam vel elit augue. feugiat sem sem. Sed ullamcorper, nulla consectetur facili
 </section>
 
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-<script scr="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-<script src="/scripts/app.js"></script>
-<script src="/scripts/server.js"></script>
-<!-- <script src="/scripts/text.js"></script> -->
-<script src="/scripts/models/githubToken.js"></script>
-<script src="/scripts/models/repo.js"></script>
-<script src="/scripts/views/repoView.js"></script>
-
-
-<script src="/scripts/controllers/aboutControl.js"></script>
-<script src="/scripts/controllers/projectControl.js"></script>
-<script src="/scripts/controllers/slideControl.js"></script>
-<script src="/scripts/controllers/route.js"></script>
-
-
 </main>
 <footer>
   <a href = "http://google.com"><i class="fa fa-linkedin fa-2x" id = "icon" aria-hidden="true"></i></a>
   <a href = "http://google.com"><i class="fa fa-github fa-2x" id = "icon" aria-hidden="true"></i></a>
 </footer>
+
+<script type="text/javascript" src="scripts/app.js" charset="utf-8"></script>
+<script type="text/javascript" src="scripts/models/repo.js"></script>
+<script type="text/javascript" src="scripts/views/repoView.js"></script>
+<script type="text/javascript" src="scripts/controllers/aboutControl.js"></script>
+<script type="text/javascript" src="scripts/controllers/projectControl.js"></script>
+<script type="text/javascript" src="scripts/controllers/slideControl.js"></script>
+<script type="text/javascript" src="scripts/controllers/route.js" charset="utf-8"></script>
+
+</body>
 </html>

@@ -1,15 +1,12 @@
 'use strict';
 
-/*globals $,document:false */
 
-var portfolio = [];
-
-
-var liEle = $('#imgUl li');
-var count = liEle.length;
-var width = liEle.width();
-var height = liEle.height();
-var ulWidth = count * width;
+let portfolio = [];
+let liEle = $('#imgUl li');
+let count = liEle.length;
+let width = liEle.width();
+let height = liEle.height();
+let ulWidth = count * width;
 
 function Portfolio (rawDataObj) {
   this.title = rawDataObj.title;
@@ -18,7 +15,7 @@ function Portfolio (rawDataObj) {
 
 Portfolio.handle = function() {
   $('nav').on('click', 'li', function(){
-    var $showThis = $(this).data('content');
+    let $showThis = $(this).data('content');
     $('section#page').hide();
     $('section.' + $showThis).show();
   });
@@ -29,7 +26,6 @@ Portfolio.handleClick = function(){
     $('.menu').toggle('500');
   });
 };
-
 
 
 Portfolio.leftArr = function() {
@@ -60,27 +56,13 @@ Portfolio.initAnimate = function(){
   $('a#next').click(function () {
     Portfolio.rightArr();
   });
-  var imgWidth = $('#imgUl li.img').width();
-  var parentWidth = $('#imgUl li').width();
+  let imgWidth = $('#imgUl li.img').width();
+  let parentWidth = $('#imgUl li').width();
   if (imgWidth > parentWidth) {
     $('#imgUl li.img').css('width', '100%');
     $('#imgUl li img').css('height','100%');
   }
 };
-
-// rawData.forEach(function(obj) {
-//   portfolio.push(new Portfolio(obj));
-// });
-//
-// portfolio.forEach(function(article){
-//   $('#articles').append(article.toHtml());
-// });
-//
-//
-// Portfolio.toHtml = function() {
-//   var template = Handlebars.compile($('#article-template').text());
-//   return template(this);
-// };
 
 
 $(document).ready(function(){
