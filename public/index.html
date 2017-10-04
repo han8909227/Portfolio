@@ -2,14 +2,19 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/base.css" />
+  <link rel="stylesheet" type="text/css" href="css/layout.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <script id="repo-template" type="text/x-handlebars-template">
-    <li>
+    <li id="repoList">
+
       <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
       <p>Description: {{description}}</p>
       <p>Language: {{language}}</p>
@@ -25,16 +30,29 @@
 
 <body>
 <header>
-  <h1 class = "name"> Han Bao </h1>
 
-  <nav>
-    <i class="fa fa-bars fa-3x" id="menu" aria-hidden="true"></i>
-    <ul class="menu">
-      <li data-content = "slide"><a href="/slide"> Screenshots </a></li>
-      <li data-content = "project"><a href="/github"> Projects </a></li>
-      <li data-content = "about"><a href="/about"> About me </a></li>
-    </ul>
-  </nav>
+
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+         <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="/home">Home</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/github">Projects</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+  </div>
 
 
 </header>
@@ -43,23 +61,7 @@
 
 
 
-  <div class="slide" id="page">
-    <a href="#" id="next">>></a>
-    <a href="#" id="prev"><</a>
-    <ul id ="imgUl">
-      <li><img class = "img" style="float:left" src="img/1.jpg"></li>
-      <li><img class = "img" style="float:left" src="img/2.jpg"></li>
-      <li><img class = "img" style="float:left" src="img/3.jpg"></li>
-      <li><img class = "img" style="float:left" src="img/4.jpg"></li>
-    </ul>
-  </div>
-
 <section class="page" id = "project">
-    <section>
-      <h1>Some of my recent projects:</h1>
-      <ul>
-      </ul>
-    </section>
 </section>
 
 <section class="page" id = "about">
@@ -71,6 +73,10 @@ velit quis venenatis tincidunt. Ut neque nibh, ornare venenatis ornare vel, inte
 Etiam vel elit augue. feugiat sem sem. Sed ullamcorper, nulla consectetur facilisis vestibulum, sem erat tincidunt enim, sed semper ex dui sit amet turpis. Donec quis arcu hendrerit libero dictum pulvinar. Nulla congue ultricies lacus efficitur venenatis.</p>
 </section>
 
+
+<section class="page" id = "contact">
+
+</section>
 
 </main>
 <footer>
