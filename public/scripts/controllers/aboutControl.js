@@ -4,8 +4,7 @@ var app = app || {};
   const aboutControl = {};
 
   aboutControl.init = function() {
-    $('#page').hide();
-    $('.about').show();
+    $('#about').show().siblings().hide()
   }
 
   module.aboutControl = aboutControl;

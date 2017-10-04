@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,12 @@
   },
   "homepage": "https://github.com/han8909227/portfolio#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.15.4",
-    "handlebars": "^4.0.10"
+    "express-request-proxy": "^2.0.0",
+    "fs": "0.0.1-security",
+    "handlebars": "^4.0.10",
+    "jquery": "^3.2.1",
+    "pg": "^7.3.0"
   }
 }

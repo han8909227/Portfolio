@@ -5,7 +5,7 @@ var app = app || {};
   const repoView = {};
 
   const ui = function() {
-    let $about = $('.project');
+    let $about = $('#project');
 
     $about.find('ul').empty();
     $about.show().siblings().hide();
@@ -16,7 +16,7 @@ var app = app || {};
   repoView.index = function() {
     ui();
 
-    $('.project ul').append(
+    $('#project').append(
       app.repos.with('name').map(render))
   };
 

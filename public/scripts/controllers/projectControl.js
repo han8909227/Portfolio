@@ -6,7 +6,7 @@ var app = app || {};
   const projectControl = {};
 
   projectControl.init = function() {
-    $('.project').show().siblings().hide();
+    $('#project').show().siblings().hide();
     console.log('im here');
 
     app.repos.requestRepos(app.repoView.index);
