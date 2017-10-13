@@ -22,14 +22,46 @@
   text-align: center;
   display: block;
   margin:auto;
-  color: white;
+  color:#414f57;
   padding: 2rem;
   width: 40%;
-  height: 600px; 
-
-  font-size: 1.2rem;
+  height: 600px;
+  font-size: 25px;
 }
 
 .page{
   display: none;
+}
+
+
+#intro img {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+}
+
+#intro ul{
+  position: relative;
+  margin: 0px auto;
+
+}
+
+#intro li{
+  display: inline;
+}
+
+
+@media only screen and (max-width: 640px) {
+  #video-background{
+    display: none
+  }
+
+  body{
+    background-image:url("../data/mobile.jpg");
+  }
+
+  #intro{
+    width: 80%;
+  }
+
 }
