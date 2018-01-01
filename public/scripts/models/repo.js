@@ -12,6 +12,5 @@ var app = app || {};
   };
 
   repos.with = attr => repos.all.filter(repo => repo[attr]);
-
   module.repos = repos;
 })(app);
