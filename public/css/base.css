@@ -23,3 +23,10 @@
 	transition: 0.7s all linear;
 	height: 100%;
 }
+
+
+body{
+  color: #414f57;
+  font-family: 'Armata', sans-serif;
+  font-weight: 350;
+}

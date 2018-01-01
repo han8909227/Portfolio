@@ -5,17 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/base.css" />
   <link rel="stylesheet" type="text/css" href="css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="css/modules.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <script id="repo-template" type="text/x-handlebars-template">
-    <li id="repoList">
+    <li id="repoList" onclick="location.href ='{{html_url}}';">
 
-      <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+      <a href="{{html_url}}" target="_blank" style="text-transform: uppercase"><h3>{{name}}</h3></a>
       <p>Description: {{description}}</p>
       <p>Language: {{language}}</p>
       <p>Created: {{created_at}}</p>
@@ -29,9 +31,9 @@
 
 
 <body>
-  <video autoplay loop id="video-background" muted plays-inline>
+<!--   <video autoplay loop id="video-background" muted plays-inline>
     <source src="https://player.vimeo.com/external/158148793.hd.mp4?s=8e8741dbee251d5c35a759718d4b0976fbf38b6f&profile_id=119&oauth2_token_id=57447761" type="video/mp4">
-  </video>
+  </video> -->
 <header>
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 			<div class="container">
@@ -62,18 +64,15 @@
 
 
 <section class="page" id = "intro">
-  <div id="introHead">
-  </div>
 
-  <div id="introBody">
-    <h1>Name</h1>
-    <p>text here</p>
-    <address>Address</address>
+    <img src="http://placehold.it/200x200" alt="Profile Image" />
+    <h1>Han Bao</h1>
+    <p>Developer <br /> Chemist </p>
+    <address>Seattle, WA</address>
     <ul id="mediaList">
-      <li>FB</li>
-      <li>GH</li>
-      <li>LinkIn</li>
-  </div>
+      <li><a href = "https://www.linkedin.com/in/hbao2016/"><i class="fa fa-linkedin fa-2x" id = "icon" aria-hidden="true"></i></a></li>
+      <li><a href = "https://github.com/han8909227"><i class="fa fa-github fa-2x" id = "icon" aria-hidden="true"></i></a></li>
+    </ul>
 </section>
 
 
@@ -83,13 +82,9 @@
 
 <section class="page" id = "about">
   <h2>About Me</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut neque nibh, ornare venenatis ornare vel, interdum eget neque. Fusce vel dignissim augue. Cras eget sagittis orci. Donec odio odio, vulputate sit amet aliquet eget, iaculis et ante. Nullam luctus dui efficitur, iaculis lacus at, euismod est. Morbi in placerat elit, nec dapibus nulla. Morbi eleifend lacus vel blandit cursus.
-    elit quis venenatis tinciduntte sit amet aliquet eget, iaculis et ante. Nullam luctus dui efficitur, iaculis lacus at, euismod est. Morbi in placerat elit, nec dapibus nulla. Morbi eleifend lacus vel blandit cursus.
-velit quis venenatis tincidunt. Ut neque nibh, ornare venenatis ornare vel, interdum eget neque. Fusce vel dignissim augue. Cras eget sagittis orci. Donec odio odio, vulputate sit amet aliquet eget, iaculis et ante. Nullam luctus dui efficitur, iaculis lacus at, euismod est. Morbi in placerat elit, nec dapibus nulla. Morbi eleifend lacus vel blandit cursus.
-
-Etiam vel elit augue. feugiat sem sem. Sed ullamcorper, nulla consectetur facilisis vestibulum, sem erat tincidunt enim, sed semper ex dui sit amet turpis. Donec quis arcu hendrerit libero dictum pulvinar. Nulla congue ultricies lacus efficitur venenatis.</p>
+  <p id="whoIam">Motivated, kept learning programmer</p>
 </section>
-
+.
 
 <section class="page" id = "contact">
 
@@ -97,8 +92,6 @@ Etiam vel elit augue. feugiat sem sem. Sed ullamcorper, nulla consectetur facili
 
 </main>
 <footer>
-  <a href = "https://www.linkedin.com/in/hbao2016/"><i class="fa fa-linkedin fa-2x" id = "icon" aria-hidden="true"></i></a>
-  <a href = "https://github.com/han8909227"><i class="fa fa-github fa-2x" id = "icon" aria-hidden="true"></i></a>
 </footer>
 
 <script type="text/javascript" src="scripts/app.js" charset="utf-8"></script>
