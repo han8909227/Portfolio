@@ -4,7 +4,9 @@ var app = app || {};
   const aboutControl = {};
 
   aboutControl.init = function() {
-    $('#about').show().siblings().hide()
+    $('#about').show().siblings().hide();
+    $('#particles-js').css('z-index', 'auto');
+
   }
 
   module.aboutControl = aboutControl;

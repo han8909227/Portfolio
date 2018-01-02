@@ -8,6 +8,7 @@ let width = liEle.width();
 let height = liEle.height();
 let ulWidth = count * width;
 
+
 function Portfolio (rawDataObj) {
   this.title = rawDataObj.title;
   this.body = rawDataObj.body;
@@ -69,4 +70,5 @@ $(document).ready(function(){
   Portfolio.handle();
   // Portfolio.handleClick();
   Portfolio.initAnimate();
+
 });

@@ -1,9 +1,4 @@
-
-
-
-
-
-
+/*
 #video-background {
   position: fixed;
   min-width: 100%;
@@ -14,17 +9,17 @@
   background-size: contain;
   z-index: -1;
   border: 2px solid white;
-}
+}*/
 
 
 #intro{
-  background: rgba(0,0,0,0.2);
   text-align: center;
   display: block;
   margin:auto;
-  color:#414f57;
+  color:white;
   padding: 2rem;
-  width: 40%;
+  width: 45%;
+  opacity: 0.9;
   height: 600px;
   font-size: 30px;
   font-family: 'Armata', sans-serif;

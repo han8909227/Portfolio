@@ -14,6 +14,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
   <script id="repo-template" type="text/x-handlebars-template">
     <li id="repoList" onclick="location.href ='{{html_url}}';">
 
@@ -30,11 +31,12 @@
 </head>
 
 
-<body>
 <!--   <video autoplay loop id="video-background" muted plays-inline>
     <source src="https://player.vimeo.com/external/158148793.hd.mp4?s=8e8741dbee251d5c35a759718d4b0976fbf38b6f&profile_id=119&oauth2_token_id=57447761" type="video/mp4">
   </video> -->
 <!-- <iframe id="video-background" src="https://www.youtube.com/embed/FG0fTKAqZ5g?autoplay=1&mute=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe> -->
+<div id="particles-js"></div>
+
 
 <header>
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
@@ -69,10 +71,10 @@
 <section class="page" id = "intro">
     <img src="https://avatars1.githubusercontent.com/u/29118945?s=400&u=7012f058cd30bd05e9d94cc85458bb12f2836aa1&v=4" alt="Profile Image" />
     <h1>Han Bao</h1>
-    <p>Python Developer </p>
+    <p>Software Developer </p>
     <p>Seattle, WA</p>
     <address style="margin-bottom: 0">
-       Email: <a href="mailto:hbao2016@hotmail.com">hbao2016@hotmail.com</a>
+       Email: <a href="mailto:hbao2016@hotmail.com">hbao2016@hotmail.com</a> <br/>
        Phone: <a href="tel:6266273202">(626) 627-3202 </a>
     </address>
 </section>
@@ -89,15 +91,14 @@
   and constantly dive deep into unfamilar area and technologies.</p>
 </section>
 
-
-<section class="page" id = "contact">
-
-  <h1>Testing</h1>
-</section>
-
 </main>
 <footer>
+  <p>© Copyright 2017-2018, Han Bao. Created using Express JS.
 </footer>
+
+
+<script type="text/javascript" src="scripts/views/particle.js"></script>
+<script type="text/javascript" src="scripts/views/particleSpec.js"></script>
 
 <script type="text/javascript" src="scripts/app.js" charset="utf-8"></script>
 <script type="text/javascript" src="scripts/models/repo.js"></script>
@@ -107,5 +108,5 @@
 <script type="text/javascript" src="scripts/controllers/slideControl.js"></script>
 <script type="text/javascript" src="scripts/controllers/route.js" charset="utf-8"></script>
 
-</body>
+
 </html>
