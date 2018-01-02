@@ -15,8 +15,11 @@ var app = app || {};
   let render = Handlebars.compile($('#repo-template').text());
   repoView.index = function() {
     ui();
-    repoView.myProject = app.repos.all.filter(repos=>repos.name.match(/^\D/g)).filter(repos=>repos.owner.login == "han8909227").filter(repos=>repos.name.match(/^(?!learning).*/));
-
+    repoView.myProject = app.repos.all
+    .filter(repos=>repos.name.match(/^\D/g))
+    // .filter(repos=>repos.owner.login == "han8909227")
+    .filter(repos=>repos.name.match(/^(?!learning).*/));
+    console.log(app.repos.all)
 
     $('#project').append(
       repoView.myProject.map(render))
