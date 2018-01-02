@@ -23,6 +23,7 @@
     "fs": "0.0.1-security",
     "handlebars": "^4.0.10",
     "jquery": "^3.2.1",
+    "particles.js": "^2.0.0",
     "pg": "^7.3.0"
   }
 }

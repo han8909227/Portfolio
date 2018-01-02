@@ -1,32 +1,58 @@
 
 
-/*#repoList{
-  display: inline-block;
-  height: 10%;
-  width: 22%;
-  margin:auto;
-}
-*/
-
 #repoList {
     display: inline-block;
     width: 20%;
     height: auto;
-    margin-left: 3%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 1%;
+    box-shadow: 3px 8px rgba(0,0,0,0.10);
     transition: 0.3s;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 #project {
-  background: rgba(0,0,0,0.2);
+  background: black;
+  opacity: 0.7;
   margin:auto;
-  color:#414f57;
+  color: white;
   padding: 2rem;
   width: 90%;
   height: auto;
+  font-family: 'Armata', sans-serif;
+
 }
 
 
 #repoList:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 2px 8px 16px 2px #778899;
+}
+
+
+#about {
+  background: black;
+  opacity: 0.7;
+  margin:auto;
+  color: white;
+  padding: 2rem;
+  width: 90%;
+  height: auto;
+  width: 50%;
+  font-family: 'Armata', sans-serif;
+  font-size: 18px;
+}
+
+
+
+#contact {
+  background: black;
+  opacity: 0.7;
+  margin:auto;
+  color: white;
+  padding: 2rem;
+  width: 90%;
+  height: auto;
+  width: 50%;
+  font-family: 'Armata', sans-serif;
+  font-size: 18px;
 }
