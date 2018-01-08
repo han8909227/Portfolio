@@ -17,16 +17,16 @@
 
 
   <script id="repo-template" type="text/x-handlebars-template">
-    <li id="repoList" onclick="location.href ='{{html_url}}';">
+    <li id="repoList" onclick="location.href ='{{url}}';">
 
-      <a href="{{html_url}}" target="_blank" style="text-transform: uppercase"><h3>{{name}}</h3></a>
+      <a href="{{url}}" target="_blank" style="text-transform: uppercase"><h3>{{title}}</h3></a>
       <p>Description: {{description}}</p>
       <p>Language: {{language}}</p>
-      <p>Created: {{created_at}}</p>
-      <p>Last updated: {{updated_at}}</p>
-      {{#if watchers_count}}
+      <p>Last updated:</p>
+      <p> {{dateUpdated}} </p>
+<!--       {{#if watchers_count}}
         <p>{{watchers_count}} watching this repo</p>
-      {{/if}}
+      {{/if}} -->
     </li>
   </script>
 </head>

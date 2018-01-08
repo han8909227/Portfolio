@@ -27,6 +27,7 @@ function proxyGitHub(request, response) {
   }))(request, response);
 }
 
+app.head('/github/*', proxyGitHub);
 app.get('/github/*', proxyGitHub);
 app.get('*', (request, response) => response.sendFile('index.html', {root: './public'}));
 

@@ -9,7 +9,7 @@ var app = app || {};
     $('#project').show().siblings().hide();
     $('#particles-js').css('z-index', '-1');
 
-    app.repos.requestRepos(app.repoView.index);
+    app.Project.fetchAll(app.repoView.index);
   }
 
   module.projectControl = projectControl;
