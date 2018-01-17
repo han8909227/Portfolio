@@ -46,12 +46,6 @@ var app = app || {};
     });
     Project.filtered = Project.filtered.filter(repos=>repos.isOwner)
 
-
-    // Project.filtered = Project.all
-    // .filter(repos=>repos.title.match(/^\D/g))
-    // .filter(repos=>repos.isOwner)
-    // .filter(repos=>repos.title.match(/^(?!learning).*/));
-    console.log(Project.all)
   }
 
   Project.fetchAll = function(callback){
